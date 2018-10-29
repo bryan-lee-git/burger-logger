@@ -1,0 +1,45 @@
+<h1 style="font-weight:bolder;">🍔 BURGERLOGGER 5000 🍔 </h1><br/>
+
+<div class="row z-depth-1 white" style="padding:30px;border-radius:8px;">
+    <div class="col s4" style="padding:10px;">
+        <h3 style="font-weight:bolder;">New Burger</h3>
+        <br/>
+        <form id="create-form">
+            <div class="input-field center-align">
+                <label id="burger-label" for="burger">Enter the name of your burger...</label>
+                <input type="text" id="burger" name="name" />
+            </div>
+            Has The Burger Been Eaten?<br/><br/>
+            <label>
+                <input class="with-gap" type="radio" name="eaten" value="0" checked/><span>Not yet!</span>
+            </label>
+            <label>
+                <input class="with-gap" type="radio" name="eaten" value="1" /><span>Yep. It was delicous.</span>
+            </label>
+            <br/><br/><br/>
+            <button class="green darken-1 btn" type="submit" style="width:100%;">Submit Burger</button>
+        </form>
+    </div>
+    <div class="col s4" style="padding:10px;">
+        <h3 style="font-weight:bolder;">Available Burgers</h3>
+        <br/>
+        <ul>
+            {{#each burgers}}
+                {{#unless eaten}}
+                    {{> burgers/burger-block eaten=true}}
+                {{/unless}}
+            {{/each}}
+        </ul>
+    </div>
+    <div class="col s4" style="padding:10px;">
+        <h3 style="font-weight:bolder;">Burgers Eaten</h3>
+        <br/>
+        <ul>
+            {{#each burgers}}
+                {{#if eaten}}
+                    {{> burgers/burger-block eaten=false}}
+                {{/if}}
+            {{/each}}
+        </ul>
+    </div>
+</div>

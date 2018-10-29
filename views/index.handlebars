@@ -1,8 +1,18 @@
-<h1 style="font-weight:bolder;">🍔 BURGERLOGGER 5000 🍔 </h1><br/>
+<h1>🍔 BURGERLOGGER 🍔 </h1><br/>
 
 <div class="row z-depth-1 white" style="padding:30px;border-radius:8px;">
-    <div class="col s4" style="padding:10px;">
-        <h3 style="font-weight:bolder;">New Burger</h3>
+
+    <div class="col s12">
+        <ul class="tabs green lighten-4 z-depth-1" style="border-radius:8px;">
+            <li class="tab col s4"><a style="font-weight:bolder;" class="green-text" href="#add">Add Burgers</a></li>
+            <li class="tab col s4"><a style="font-weight:bolder;" class="active green-text" href="#eat">Burgers To Eat</a></li>
+            <li class="tab col s4"><a style="font-weight:bolder;" class="green-text" href="#eaten">Burgers Eaten</a></li>
+        </ul>
+    </div>
+
+    <div id="add" class="col s12">
+        <br/>
+        <h3 style="font-weight:bolder;">Add A Burger!</h3>
         <br/>
         <form id="create-form">
             <div class="input-field center-align">
@@ -17,11 +27,13 @@
                 <input class="with-gap" type="radio" name="eaten" value="1" /><span>Yep. It was delicous.</span>
             </label>
             <br/><br/><br/>
-            <button class="green darken-1 btn" type="submit" style="width:100%;">Submit Burger</button>
+            <button class="green darken-1 btn z-depth-4" type="submit" style="width:100%;">Submit Burger</button>
         </form>
     </div>
-    <div class="col s4" style="padding:10px;">
-        <h3 style="font-weight:bolder;">Available Burgers</h3>
+
+    <div id="eat" class="col s12 center-align">
+        <br/>
+        <h3 style="font-weight:bolder;">Eat A Burger!</h3>
         <br/>
         <ul>
             {{#each burgers}}
@@ -31,8 +43,10 @@
             {{/each}}
         </ul>
     </div>
-    <div class="col s4" style="padding:10px;">
-        <h3 style="font-weight:bolder;">Burgers Eaten</h3>
+
+    <div id="eaten" class="col s12">
+        <br/>
+        <h3 style="font-weight:bolder;">Eaten Burgers!</h3>
         <br/>
         <ul>
             {{#each burgers}}
@@ -42,4 +56,5 @@
             {{/each}}
         </ul>
     </div>
+
 </div>

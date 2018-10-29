@@ -1,6 +1,7 @@
-// PUBLIC POST AND PUT FUNCTIONS (FOR FORM SUBMIT AND/OR BUTTON CLICK)
+$(document).ready(() => {
+    $('.tabs').tabs();
+});
 
-// Make sure we wait to attach our handlers until the DOM is fully loaded.
 $(function() {
     $(".change-eaten").on("click", function(event) {
         let id = $(this).data("id");

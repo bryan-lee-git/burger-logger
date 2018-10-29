@@ -1,8 +1,12 @@
-<li>
-	{{name}}<br/><br/>
-	<button class="green darken-1 change-eaten btn" data-id="{{id}}" data-newEaten="{{eaten}}">
-		{{#if eaten}}EAT ME!{{else}}EAT AGAIN!{{/if}}
+<li class="col s12 m6 l4">
+	<h4 style="font-weight:bolder">{{name}}</h4><br/><br/>
+	<button class="col s4 offset-s1 green darken-2 change-eaten btn z-depth-4" style="height:90px;" data-id="{{id}}" data-newEaten="{{eaten}}">
+		{{#if eaten}}EAT!{{else}}SECONDS!{{/if}}<br/>
+		<i class="large material-icons">fastfood</i>
 	</button>
-	<button class="green darken-1 delete-burger btn" data-id="{{this.id}}">DELETE!</button>
+	<button class="col s4 offset-s2 red darken-4 delete-burger btn z-depth-4" style="height:90px;" data-id="{{this.id}}">
+		DELETE!<br/>
+		<i class="large material-icons">delete_forever</i>
+	</button>
 	<br/><br/>
 </li>

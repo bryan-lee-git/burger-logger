@@ -12,3 +12,24 @@ h1 {
     font-weight:bolder;
     font-size: 2em;
 }
+
+.tabs .tab a.active {
+    background-color: forestgreen;
+    color: white !important;
+}
+
+li.indicator {
+    background-color: rgba(0, 0, 0, 0.1) !important;
+}
+
+.tabs .tab a:focus.active {
+    background-color: forestgreen;
+}
+
+.btn, .btn-large, .btn-small {
+    font-size: 10px;
+}
+
+[type="radio"]:checked+span:after, [type="radio"].with-gap:checked+span:before, [type="radio"].with-gap:checked+span:after {
+    background-color: forestgreen;
+}

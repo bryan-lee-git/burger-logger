@@ -1,6 +1,5 @@
 const express = require("express");
 const app = express();
-const path= require("path");
 app.use(express.static("public"));
 const PORT = process.env.PORT || 3000;
 const exphbs = require("express-handlebars");

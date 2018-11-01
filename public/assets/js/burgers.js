@@ -3,7 +3,7 @@ $(document).ready(() => {
 });
 
 $(function() {
-    $(".change-eaten").on("click", function(event) {
+    $(".change-eaten").on("click", function() {
         let id = $(this).data("id");
         let newEaten = $(this).data("neweaten");
         let newEatenState = {
@@ -24,7 +24,6 @@ $(function() {
             name: $("#burger").val().trim(),
             eaten: $("[name=eaten]:checked").val().trim()
         };
-        console.log(newBurger);
         $.ajax("/api/burgers", { 
             method: "POST",
             data: newBurger 
@@ -34,12 +33,12 @@ $(function() {
         });
     });
 
-    $(".delete-burger").on("click", function(event) {
+    $(".delete-burger").on("click", function() {
         let id = $(this).data("id");
         $.ajax("/api/burgers/" + id, {
             method: "DELETE"
         }).then(() => {
-            console.log("deleted cat", id);
+            console.log("deleted burger", id);
             location.reload();
         });
     });

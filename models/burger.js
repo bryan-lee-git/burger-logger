@@ -1,24 +1,24 @@
 // Import the ORM to create functions that will interact with the database.
-var orm = require("../config/orm.js");
+let orm = require("../config/orm.js");
 
-var burger = {
-    all: function(cb) {
+let burger = {
+    all: (cb) => {
         orm.all("burgers", (res) => {
             cb(res);
         });
     },
-    create: function(cols, vals, cb) {
+    create: (cols, vals, cb) => {
         orm.create("burgers", cols, vals, (res) => {
             cb(res);
         });
     },
-    update: function(objColVals, condition, cb) {
+    update: (objColVals, condition, cb) => {
         orm.update("burgers", objColVals, condition, (res) => {
             cb(res);
         });
     },
     delete: (condition, cb) => {
-        orm.delete("burgers", condition, function(res) {
+        orm.delete("burgers", condition, (res) => {
             cb(res);
         });
     }
